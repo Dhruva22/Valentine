@@ -31,9 +31,9 @@ h1 {
 }
 
 .buttons {
-    position: fixed;
-    bottom: 40px;
-    left: 50%;
+    margin-top: 30px;
+    position: relative;
+    height: 80px;
     transform: translateX(-50%);
     display: flex;
     gap: 25px; /* space between YES and NO */
@@ -52,10 +52,11 @@ button {
 #yes {
     background: #ff4d6d;
     color: white;
+    animation: pulse 1.8s infinite;
 }
 
 #yes:hover {
-    transform: scale(1.15);
+    transform: scale(1.2);
 }
 
 #no {
@@ -63,6 +64,22 @@ button {
     color: white;
     position: absolute;
 }
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(255, 77, 109, 0.6);
+    }
+    70% {
+        transform: scale(1.08);
+        box-shadow: 0 0 0 15px rgba(255, 77, 109, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(255, 77, 109, 0);
+    }
+}
+
 </style>
 </head>
 
